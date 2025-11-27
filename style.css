@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  outline: none;
+}
+
+body {
+  background: #121212;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.4;
+  
+}
+.Simple-mode-container {
+  height: 100vh;
+  overflow: hidden;
+}
+.head-simple-mode {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  background-color: #21683C;
+  font-weight: bold;
+  padding: 15px 20px;
+  transition: all 0.3s;
+}
+.head-simple-mode.head-dange {
+  background-color: #EE0204;
+}
+.head-simple-mode.head-warning {
+  background-color: #EEB669;
+}
+.body-simple-mode {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+.info-simple-mode {
+  flex: 1;
+}
+.lanes {
+  flex: 1;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.lane {
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 / 5px 80px repeat-y;
+  transform-origin: top;
+  animation: moveLane 1s linear infinite;
+  animation-duration: 1s;
+}
+/* .lane:nth-child(1) {
+  transform-origin: top;
+  transform: skewX(-20deg);
+}
+.lane:nth-child(2) {
+  transform-origin: top;
+  transform: skewX(-10deg);
+}
+.lane:nth-child(3) {
+  transform-origin: top;
+  transform: skewX(10deg);
+}
+.lane:nth-child(4) {
+  transform-origin: top;
+  transform: skewX(20deg);
+} */
+@keyframes moveLane {
+    from {
+        background-position-y: 0; /* Bắt đầu ở vị trí 0 (đỉnh) */
+    }
+    to {
+        background-position-y: 80px; /* Kết thúc ở vị trí 80px (kích thước chu kỳ lặp lại) */
+    }
+}
+.car-simple-mode {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.car-simple-mode .car-item img{
+  width: calc(100vw/7);
+}
+.car-simple-mode .car-item:not(.car-normal) {
+  display:none
+}
+.car-simple-mode.car-stop .car-normal {
+  display: none;
+}
+.car-simple-mode.car-stop .car-brake {
+  display: block;
+}
+.car-simple-mode.car-fast .car-normal {
+  display: none;
+}
+.car-simple-mode.car-fast .car-speed {
+  display: block;
+}
+/* ----------------------------------------------------- responsive */
+@media (max-width: 1536px) {
+}
+@media (max-width: 1280px) {
+  .car-simple-mode .car-item img{
+    width: calc(100vw/6);
+  }
+}
+@media (max-width: 1024px) {
+  .head-simple-mode {
+    font-size: 24px;
+  }
+  .car-simple-mode .car-item img{
+    width: calc(100vw/5);
+  }
+}
+@media (max-width: 992px) {
+  .head-simple-mode {
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+  .car-simple-mode .car-item img{
+    width: calc(100vw/4);
+  }
+}
+@media (max-width: 767px) {
+  
+}
+@media (max-width: 400px) {
+}
