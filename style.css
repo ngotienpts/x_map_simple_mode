@@ -1,140 +1,358 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Be Vietnam Pro", sans-serif;
-  outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Be Vietnam Pro", sans-serif;
+    outline: none;
 }
 
 body {
-  background: #121212;
-  color: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  line-height: 1.4;
-  
+    background: #121212;
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.4;
 }
 .Simple-mode-container {
-  height: 100vh;
-  overflow: hidden;
+    height: 100vh;
+    overflow: hidden;
 }
 .head-simple-mode {
-  text-align: center;
-  color: #fff;
-  font-size: 30px;
-  background-color: #21683C;
-  font-weight: bold;
-  padding: 15px 20px;
-  transition: all 0.3s;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    background-color: #21683c;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: all 0.3s;
 }
 .head-simple-mode.head-dange {
-  background-color: #EE0204;
+    background-color: #ee0204;
 }
 .head-simple-mode.head-warning {
-  background-color: #EEB669;
+    background-color: #eeb669;
 }
 .body-simple-mode {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  position: relative;
-}
-.info-simple-mode {
-  flex: 1;
-}
-.lanes {
-  flex: 1;
     display: flex;
     width: 100vw;
     height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.info-simple-mode {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    flex: 1;
+    padding-bottom: 20px;
+}
+.timeline .timeline-icon {
+    position: relative;
+    border-top: 1px solid #fff;
+}
+.timeline .timeline-icon img {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-15px,-50%);
+}
+.timeline .timeline-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    grid-gap: 20px;
+    padding: 10px 15px;
+}
+.timeline .timeline-text .txt-1 {
+    font-size: 19px;
+    font-weight: bold;
+    color: #fff;
+}
+.timeline .timeline-text .txt-2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+.traffic-signs {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.speed-limit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    grid-gap: 5px;
+    gap: 5px;
+}
+.speed-limit .speed-limit__item,
+.speed-limit[data-speed-limit='normal'] .speed-limit__item {
+    display: none;
+}
+.speed-limit[data-speed-limit='maximum-speed-limit-30'] .speed-limit--30,
+.speed-limit[data-speed-limit='maximum-speed-limit-40'] .speed-limit--40,
+.speed-limit[data-speed-limit='maximum-speed-limit-50'] .speed-limit--50,
+.speed-limit[data-speed-limit='maximum-speed-limit-60'] .speed-limit--60,
+.speed-limit[data-speed-limit='maximum-speed-limit-70'] .speed-limit--70,
+.speed-limit[data-speed-limit='maximum-speed-limit-80'] .speed-limit--80,
+.speed-limit[data-speed-limit='maximum-speed-limit-90'] .speed-limit--90,
+.speed-limit[data-speed-limit='maximum-speed-limit-100'] .speed-limit--100,
+.speed-limit[data-speed-limit='maximum-speed-limit-120'] .speed-limit--120,
+.speed-limit[data-speed-limit='end-of-prohibition'] .speed-limit--end-of-prohibition,
+.speed-limit[data-speed-limit='no-stopping'] .speed-limit--no-stopping,
+.speed-limit[data-speed-limit='no-parking'] .speed-limit--no-parking,
+.speed-limit[data-speed-limit='no-turn-left'] .speed-limit--no-turn-left,
+.speed-limit[data-speed-limit='no-turn-right'] .speed-limit--no-turn-right,
+.speed-limit[data-speed-limit='no-turn-left-no-u-turn'] .speed-limit--no-turn-left-no-u-turn,
+.speed-limit[data-speed-limit='no-u-turn'] .speed-limit--no-u-turn,
+.speed-limit[data-speed-limit='no-cars'] .speed-limit--no-cars,
+.speed-limit[data-speed-limit='end-of-no-overtaking'] .speed-limit--end-of-no-overtaking,
+.speed-limit[data-speed-limit='no-overtaking--g5'] .speed-limit--no-overtaking-g5,
+.speed-limit[data-speed-limit='no-overtaking'] .speed-limit--no-overtaking,
+.speed-limit[data-speed-limit='end-of-maximum-speed-limit-50'] .speed-limit--end-of-maximum-speed-limit-50,
+.speed-limit[data-speed-limit='end-of-maximum-speed-limit-60'] .speed-limit--end-of-maximum-speed-limit-60,
+.speed-limit[data-speed-limit='end-of-maximum-speed-limit-70'] .speed-limit--end-of-maximum-speed-limit-70,
+.speed-limit[data-speed-limit='end-of-maximum-speed-limit-80'] .speed-limit--end-of-maximum-speed-limit-80,
+.speed-limit[data-speed-limit='end-of-maximum-speed-limit-90'] .speed-limit--end-of-maximum-speed-limit-90,
+.speed-limit[data-speed-limit='end-of-maximum-speed-limit-100'] .speed-limit--end-of-maximum-speed-limit-100,
+.speed-limit[data-speed-limit='information--end-of-built-up-area'] .speed-limit--information-end-of-built-up-area,
+.speed-limit[data-speed-limit='information-built-up-area'] .speed-limit--information-built-up-area,
+.speed-limit[data-speed-limit='signs-all-1'] .speed-limit--signs-all-1 {
+    display: block;
+}
+
+.speed-limit__item img {
+    height: 70px;
+    width: auto;
+}
+.signposts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto;
+}
+.signposts .signposts-item .item-white,
+.signposts[data-signposts="normal"] .signposts-item .item-white,
+.signposts[data-signposts="turn-left"] .signposts-item--turn-left .item-gray,
+.signposts[data-signposts="go-straight"] .signposts-item--go-straight .item-gray,
+.signposts[data-signposts="turn-right"] .signposts-item--turn-right .item-gray {
+    display: none;
+}
+.signposts[data-signposts="turn-left"] .signposts-item--turn-left .item-white,
+.signposts[data-signposts="go-straight"] .signposts-item--go-straight .item-white,
+.signposts[data-signposts="turn-right"] .signposts-item--turn-right .item-white {
+    display: block;
+}
+.signposts-item {
+    transition: all 0.3s;
+}
+.signposts-item .item-white{
+    animation: opacity 1s infinite;
+}
+.traffic-camera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin:10px auto;
+    flex-wrap: wrap;
+    grid-gap: 5px;
+    gap: 5px;
+}
+
+.traffic-camera .traffic-camera__item,
+.traffic-camera[data-data-traffic-camera="normal"] .traffic-camera__item {
+    display: none;
+}
+.traffic-camera[data-traffic-camera="traffic"] .traffic-camera--traffic,
+.traffic-camera[data-traffic-camera="speed"] .traffic-camera--speed,
+.traffic-camera[data-traffic-camera="crash"] .traffic-camera--crash,
+.traffic-camera[data-traffic-camera="cow"] .traffic-camera--cow,
+.traffic-camera[data-traffic-camera="flooded"] .traffic-camera--flooded,
+.traffic-camera[data-traffic-camera="bumps"] .traffic-camera--bumps {
+    display: block;
+}
+
+.traffic-camera__item img {
+    width: 48px;
+    height: auto;
+}
+
+
+
+.lanes {
+    flex: 1;
+    display: flex;
+    width: 100vw;
+    max-width: 600px;
+    margin: auto;
     align-items: center;
     justify-content: space-evenly;
+    height: 100%;
+    perspective: 600px;
+    transform-style: preserve-3d;
 }
 .lane {
-  width: 5px;
-  height: 100%;
-  background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 / 5px 80px repeat-y;
-  transform-origin: top;
-  animation: moveLane 1s linear infinite;
-  animation-duration: 1s;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 / 5px
+        80px repeat-y;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgb(0 0 0 / 0%)
+    );
+    animation: moveLane 1s linear infinite;
+    animation-duration: 1s;
 }
-/* .lane:nth-child(1) {
-  transform-origin: top;
-  transform: skewX(-20deg);
-}
-.lane:nth-child(2) {
-  transform-origin: top;
-  transform: skewX(-10deg);
-}
-.lane:nth-child(3) {
-  transform-origin: top;
-  transform: skewX(10deg);
-}
-.lane:nth-child(4) {
-  transform-origin: top;
-  transform: skewX(20deg);
-} */
+
 @keyframes moveLane {
     from {
-        background-position-y: 0; /* Bắt đầu ở vị trí 0 (đỉnh) */
+        background-position-y: 0;
     }
     to {
-        background-position-y: 80px; /* Kết thúc ở vị trí 80px (kích thước chu kỳ lặp lại) */
+        background-position-y: 80px;
+    }
+}
+@keyframes slight-shake {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(-0.5px, 0.5px);
+    }
+    50% {
+        transform: translate(0.5px, -0.5px);
+    }
+    75% {
+        transform: translate(-0.5px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0.5px);
     }
 }
 .car-simple-mode {
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.car-simple-mode .car-item img{
-  width: calc(100vw/7);
+.car-simple-mode .car-img {
+    width: calc(100vw / 15);
 }
-.car-simple-mode .car-item:not(.car-normal) {
-  display:none
+.car-simple-mode .car-turn .turn-item {
+    transform-origin: bottom center;
+    transform: rotateX(70deg) scaleY(1.2);
+    animation: opacity 1s infinite;
 }
-.car-simple-mode.car-stop .car-normal {
-  display: none;
+.car-simple-mode .car-turn .turn-left {
+    transform: rotateX(70deg) scaleY(1.2) translate(-45px, -20px);
 }
-.car-simple-mode.car-stop .car-brake {
-  display: block;
+.car-simple-mode .car-turn .turn-right {
+    transform: rotateX(70deg) scaleY(1.2) translate(45px, -20px);
 }
-.car-simple-mode.car-fast .car-normal {
-  display: none;
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-.car-simple-mode.car-fast .car-speed {
-  display: block;
+.car-simple-mode .car-model {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slight-shake 0.5s ease infinite;
+}
+.car-simple-mode .car-img:not(.car-normal) {
+    display: none;
+}
+.car-simple-mode[data-car="stop"] .car-img,
+.car-simple-mode[data-car="fast"] .car-img {
+    display: none;
+}
+.car-simple-mode[data-car="stop"] .car-stop,
+.car-simple-mode[data-car="fast"] .car-fast {
+    display: block;
+}
+
+.car-simple-mode .turn-item,
+.car-simple-mode[data-car="normal"] .turn-item{
+    display: none;
+}
+.car-simple-mode[data-car="turn-left"] .turn-item.turn-left,
+.car-simple-mode[data-car="turn-right"] .turn-item.turn-right {
+    display: block;
+}
+
+.current-location {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    color: #999;
+    font-size: 19px;
+    text-align: center;
+    padding: 10px;
 }
 /* ----------------------------------------------------- responsive */
 @media (max-width: 1536px) {
+    .car-simple-mode .car-img {
+        width: calc(100vw / 14);
+    }
 }
 @media (max-width: 1280px) {
-  .car-simple-mode .car-item img{
-    width: calc(100vw/6);
-  }
+    .car-simple-mode .car-img {
+        width: calc(100vw / 12);
+    }
 }
 @media (max-width: 1024px) {
-  .head-simple-mode {
-    font-size: 24px;
-  }
-  .car-simple-mode .car-item img{
-    width: calc(100vw/5);
-  }
+    .head-simple-mode {
+        font-size: 24px;
+    }
+    .car-simple-mode {
+        bottom: 100px;
+    }
+    .car-simple-mode .car-img {
+        width: calc(100vw / 10);
+    }
+    .lane {
+        width: 4px;
+        background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 /
+            4px 80px repeat-y;
+    }
 }
 @media (max-width: 992px) {
-  .head-simple-mode {
-    font-size: 20px;
-    padding: 10px 15px;
-  }
-  .car-simple-mode .car-item img{
-    width: calc(100vw/4);
-  }
+    .head-simple-mode {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+    .car-simple-mode .car-img {
+        width: calc(100vw / 6);
+    }
+    .lane {
+        width: 3px;
+        background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 /
+            3px 80px repeat-y;
+    }
 }
 @media (max-width: 767px) {
-  
+    .car-simple-mode .car-img {
+        width: calc(100vw / 4);
+    }
 }
 @media (max-width: 400px) {
 }

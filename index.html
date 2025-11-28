@@ -1,41 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple mode</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <section class="Simple-mode-container">
-    <div class="head-simple-mode">93 Sunrise A</div>
-    <div class="body-simple-mode">
-      <!-- info -->
-      <div class="info-simple-mode"></div>
-      <!-- end info -->
-      <!-- lanes -->
-      <div class="lanes">
-        <div class="lane js__lane"></div>
-        <div class="lane js__lane"></div>
-        <div class="lane js__lane"></div>
-      </div>
-      <!-- end lanes -->
-      
-      <!-- car -->
-      <div class="car-simple-mode js__carModel">
-        <div class="car-item car-normal">
-          <img src="./images/car-1.png" alt="">
-        </div>
-        <div class="car-item car-speed">
-          <img src="./images/car-3.png" alt="">
-        </div>
-      </div>
-      <!-- end car -->
-    </div>
-  </section>
-  <script src="./script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple mode</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <section class="Simple-mode-container">
+            <div class="head-simple-mode">93 Sunrise A</div>
+            <div class="body-simple-mode">
+                <!-- info -->
+                <div class="info-simple-mode">
+                    <!-- timeline -->
+                    <div class="timeline">
+                        <div class="timeline-icon">
+                            <img src="./images/svg/arrow-next-w.svg" alt="">
+                        </div>
+                        <div class="timeline-text">
+                            <div class="distance">
+                                <span class="txt-1">5.8</span>
+                                <span class="txt-2">km</span>
+                            </div>
+                            <div class="time">
+                                <span class="txt-1">11:56</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end timeline -->
+
+                    <!-- traffic signs -->
+                    <div class="traffic-signs">
+                        <!-- speed limit -->
+                        <div class="speed-limit" data-speed-limit="maximum-speed-limit-90">
+                            <div class="speed-limit__item speed-limit--30">
+                                <img src="./images/svg/30.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--40">
+                                <img src="./images/svg/40.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--50">
+                                <img src="./images/svg/50.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--60">
+                                <img src="./images/svg/60.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--70">
+                                <img src="./images/svg/70.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--80">
+                                <img src="./images/svg/80.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--90">
+                                <img src="./images/svg/90.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--100">
+                                <img src="./images/svg/100.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--120">
+                                <img src="./images/svg/120.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--end-of-prohibition">
+                                <img src="./images/svg/end-of-prohibition.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-stopping">
+                                <img src="./images/svg/no-stopping.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-parking">
+                                <img src="./images/svg/no-parking.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-turn-left">
+                                <img src="./images/svg/cam_re_trai.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-turn-right">
+                                <img src="./images/svg/cam_re_phai.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-turn-left-no-u-turn">
+                                <img src="./images/svg/cam_re_trai_va_quay_dau.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-u-turn">
+                                <img src="./images/svg/cam_quay_dau.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-cars">
+                                <img src="./images/svg/cam_o_to.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--end-of-no-overtaking">
+                                <img src="./images/svg/het_cam_vuot.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-overtaking-g5">
+                                <img src="./images/svg/cam_o_to_vuot.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--no-overtaking">
+                                <img src="./images/svg/cam_xe_tai_vuot.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--end-of-maximum-speed-limit-50">
+                                <img src="./images/svg/het_gioi_han_50.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--end-of-maximum-speed-limit-60">
+                                <img src="./images/svg/het_gioi_han_60.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--end-of-maximum-speed-limit-70">
+                                <img src="./images/svg/het_gioi_han_70.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--end-of-maximum-speed-limit-80">
+                                <img src="./images/svg/het_gioi_han_80.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--end-of-maximum-speed-limit-90">
+                                <img src="./images/svg/het_gioi_han_90.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--end-of-maximum-speed-limit-100">
+                                <img src="./images/svg/het_gioi_han_100.svg" alt="">
+                            </div>
+                            
+                            <div class="speed-limit__item speed-limit--information-end-of-built-up-area">
+                                <img src="./images/svg/het_khu_dan_cu.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--information-built-up-area">
+                                <img src="./images/svg/khu_dan_cu.svg" alt="">
+                            </div>
+                            <div class="speed-limit__item speed-limit--signs-all-1">
+                                <img src="./images/svg/information--end-of-built-up-area.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- end speed limit -->
+                        <!-- signposts -->
+                        <div class="signposts" data-signposts="turn-left">
+                            <div class="signposts-item signposts-item--turn-left">
+                                <img src="./images/svg/turn-left-w.svg" alt="" class="item-white">
+                                <img src="./images/svg/turn-left-gray.svg" alt="" class="item-gray">
+                            </div>
+                            <div class="signposts-item signposts-item--go-straight">
+                                <img src="./images/svg/go-straight-w.svg" alt="" class="item-white">
+                                <img src="./images/svg/go-straight-gray.svg" alt="" class="item-gray">
+                            </div>
+                            <div class="signposts-item signposts-item--turn-right">
+                                <img src="./images/svg/turn-right-w.svg" alt="" class="item-white">
+                                <img src="./images/svg/turn-right-gray.svg" alt="" class="item-gray">
+                            </div>
+                        </div>
+                        <!-- end signposts -->
+
+                        <!-- traffic camera -->
+                        <div class="traffic-camera" data-traffic-camera="traffic">
+                            <div class="traffic-camera__item traffic-camera--traffic">
+                                <img src="./images/svg/camera-traffic.svg" alt="">
+                            </div>
+                            <div class="traffic-camera__item traffic-camera--speed">
+                                <img src="./images/svg/camera-speed.svg" alt="">
+                            </div>
+                            <div class="traffic-camera__item traffic-camera--crash">
+                                <img src="./images/svg/crash.svg" alt="">
+                            </div>
+                            <div class="traffic-camera__item traffic-camera--cow">
+                                <img src="./images/svg/cow.svg" alt="">
+                            </div>
+                            <div class="traffic-camera__item traffic-camera--flooded">
+                                <img src="./images/svg/tron_truot.svg" alt="">
+                            </div>
+                            <div class="traffic-camera__item traffic-camera--bumps">
+                                <img src="./images/svg/bumps.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- end traffic camera -->
+                    </div>
+                    <!-- end traffic signs -->
+                </div>
+                <!-- end info -->
+                <!-- lanes -->
+                <div class="lanes" data-lanes="3">
+                    <div class="lane js__lane"></div>
+                    <div class="lane js__lane"></div>
+                    <div class="lane js__lane"></div>
+                    <div class="lane js__lane"></div>
+                </div>
+                <!-- end lanes -->
+
+                <!-- car -->
+                <div class="car-simple-mode js__carModel" data-car="normal">
+                    <div class="car-turn">
+                        <img
+                            src="./images/sang-trai.png"
+                            alt=""
+                            class="turn-item turn-left"
+                        />
+                        <img
+                            src="./images/sang-phai.png"
+                            alt=""
+                            class="turn-item turn-right"
+                        />
+                    </div>
+                    <div class="car-model">
+                        <img
+                            src="./images/car-1.png"
+                            alt=""
+                            class="car-img car-normal"
+                        />
+                        <img
+                            src="./images/car-2.png"
+                            alt=""
+                            class="car-img car-stop"
+                        />
+                        <img
+                            src="./images/car-3.png"
+                            alt=""
+                            class="car-img car-fast"
+                        />
+                    </div>
+                </div>
+                <!-- end car -->
+
+                <div class="current-location">
+                    <span>Nguyễn Xiển</span>
+                </div>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </body>
 </html>
