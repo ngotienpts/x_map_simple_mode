@@ -278,6 +278,8 @@ body {
 
 .lanes[data-lanes="2"] ~ .car-simple-mode,
 .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+.lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-right"], 
+.lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-left"], 
 .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
 .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
     left: 55%;
@@ -364,20 +366,28 @@ body {
 .car-simple-mode .car-img:not(.car-normal) {
     display: none;
 }
+.car-simple-mode[data-car="fork-slight-right"] .car-img,
+.car-simple-mode[data-car="fork-slight-left"] .car-img,
 .car-simple-mode[data-car="stop"] .car-img,
 .car-simple-mode[data-car="fast"] .car-img {
     display: none;
 }
+.car-simple-mode[data-car="fork-slight-right"] .car-fork-slight-right,
+.car-simple-mode[data-car="fork-slight-left"] .car-fork-slight-left,
 .car-simple-mode[data-car="stop"] .car-stop,
 .car-simple-mode[data-car="fast"] .car-fast {
     display: block;
 }
 
 .car-simple-mode .turn-item,
-.car-simple-mode[data-car="normal"] .turn-item{
+.car-simple-mode[data-car="normal"] .turn-item,
+.car-simple-mode[data-car="turn-left"] .car-img,
+.car-simple-mode[data-car="turn-right"] .car-img {
     display: none;
 }
 .car-simple-mode[data-car="turn-left"] .turn-item.turn-left,
+.car-simple-mode[data-car="turn-left"] .car-fork-slight-left,
+.car-simple-mode[data-car="turn-right"] .car-fork-slight-right,
 .car-simple-mode[data-car="turn-right"] .turn-item.turn-right {
     display: block;
 }
@@ -428,6 +438,8 @@ body {
 
     .lanes[data-lanes="2"] ~ .car-simple-mode,
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-right"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-left"], 
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
         left: 57%;
@@ -453,6 +465,8 @@ body {
 
     .lanes[data-lanes="2"] ~ .car-simple-mode,
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-right"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-left"], 
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
         left: 63%;
@@ -472,6 +486,8 @@ body {
     }
     .lanes[data-lanes="2"] ~ .car-simple-mode,
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-right"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-left"], 
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
         left: 66%;
