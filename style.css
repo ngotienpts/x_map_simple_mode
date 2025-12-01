@@ -91,10 +91,18 @@ body {
     flex-wrap: wrap;
     grid-gap: 5px;
     gap: 5px;
+    flex: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
 }
 .speed-limit .speed-limit__item,
 .speed-limit[data-speed-limit='normal'] .speed-limit__item {
     display: none;
+}
+.speed-limit.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 .speed-limit[data-speed-limit='maximum-speed-limit-30'] .speed-limit--30,
 .speed-limit[data-speed-limit='maximum-speed-limit-40'] .speed-limit--40,
@@ -128,8 +136,12 @@ body {
     display: block;
 }
 
+.speed-limit__item {
+    animation: scaleUpDown 10s ease-in-out infinite;
+    animation-duration: 10s;
+}
 .speed-limit__item img {
-    height: 70px;
+    height: 78px;
     width: auto;
 }
 .signposts {
@@ -139,6 +151,7 @@ body {
     max-width: 600px;
     width: 100%;
     margin: 10px auto;
+    flex: 1;
 }
 .signposts .signposts-item .item-white,
 .signposts[data-signposts="normal"] .signposts-item .item-white,
@@ -154,11 +167,13 @@ body {
 }
 .signposts-item {
     transition: all 0.3s;
+    animation: scaleUpDown 10s ease-in-out infinite;
+    animation-duration: 10s;
 }
 .signposts-item .item-white{
     animation: opacity 1s infinite;
 }
-.traffic-camera {
+.traffic-warning-signs {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,26 +182,85 @@ body {
     flex-wrap: wrap;
     grid-gap: 5px;
     gap: 5px;
+    flex: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
 }
-
-.traffic-camera .traffic-camera__item,
-.traffic-camera[data-data-traffic-camera="normal"] .traffic-camera__item {
+.traffic-warning-signs.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.traffic-warning-signs .traffic-warning-signs__item,
+.traffic-warning-signs[data-traffic-warning-signs="normal"] .traffic-warning-signs__item {
     display: none;
 }
-.traffic-camera[data-traffic-camera="traffic"] .traffic-camera--traffic,
-.traffic-camera[data-traffic-camera="speed"] .traffic-camera--speed,
-.traffic-camera[data-traffic-camera="crash"] .traffic-camera--crash,
-.traffic-camera[data-traffic-camera="cow"] .traffic-camera--cow,
-.traffic-camera[data-traffic-camera="flooded"] .traffic-camera--flooded,
-.traffic-camera[data-traffic-camera="bumps"] .traffic-camera--bumps {
+.traffic-warning-signs[data-traffic-warning-signs="traffic"] .traffic-warning-signs--traffic,
+.traffic-warning-signs[data-traffic-warning-signs="speed"] .traffic-warning-signs--speed,
+.traffic-warning-signs[data-traffic-warning-signs="crash"] .traffic-warning-signs--crash,
+.traffic-warning-signs[data-traffic-warning-signs="cow"] .traffic-warning-signs--cow,
+.traffic-warning-signs[data-traffic-warning-signs="flooded"] .traffic-warning-signs--flooded,
+.traffic-warning-signs[data-traffic-warning-signs="bumps"] .traffic-warning-signs--bumps,
+.traffic-warning-signs[data-traffic-warning-signs='end-of-prohibition'] .traffic-warning-signs--end-of-prohibition,
+.traffic-warning-signs[data-traffic-warning-signs='no-stopping'] .traffic-warning-signs--no-stopping,
+.traffic-warning-signs[data-traffic-warning-signs='no-parking'] .traffic-warning-signs--no-parking,
+.traffic-warning-signs[data-traffic-warning-signs='no-turn-left'] .traffic-warning-signs--no-turn-left,
+.traffic-warning-signs[data-traffic-warning-signs='no-turn-right'] .traffic-warning-signs--no-turn-right,
+.traffic-warning-signs[data-traffic-warning-signs='no-turn-left-no-u-turn'] .traffic-warning-signs--no-turn-left-no-u-turn,
+.traffic-warning-signs[data-traffic-warning-signs='no-u-turn'] .traffic-warning-signs--no-u-turn,
+.traffic-warning-signs[data-traffic-warning-signs='no-cars'] .traffic-warning-signs--no-cars,
+.traffic-warning-signs[data-traffic-warning-signs='end-of-no-overtaking'] .traffic-warning-signs--end-of-no-overtaking,
+.traffic-warning-signs[data-traffic-warning-signs='no-overtaking--g5'] .traffic-warning-signs--no-overtaking-g5,
+.traffic-warning-signs[data-traffic-warning-signs='no-overtaking'] .traffic-warning-signs--no-overtaking,
+.traffic-warning-signs[data-traffic-warning-signs='end-of-maximum-speed-limit-50'] .traffic-warning-signs--end-of-maximum-speed-limit-50,
+.traffic-warning-signs[data-traffic-warning-signs='end-of-maximum-speed-limit-60'] .traffic-warning-signs--end-of-maximum-speed-limit-60,
+.traffic-warning-signs[data-traffic-warning-signs='end-of-maximum-speed-limit-70'] .traffic-warning-signs--end-of-maximum-speed-limit-70,
+.traffic-warning-signs[data-traffic-warning-signs='end-of-maximum-speed-limit-80'] .traffic-warning-signs--end-of-maximum-speed-limit-80,
+.traffic-warning-signs[data-traffic-warning-signs='end-of-maximum-speed-limit-90'] .traffic-warning-signs--end-of-maximum-speed-limit-90,
+.traffic-warning-signs[data-traffic-warning-signs='end-of-maximum-speed-limit-100'] .traffic-warning-signs--end-of-maximum-speed-limit-100,
+.traffic-warning-signs[data-traffic-warning-signs='information--end-of-built-up-area'] .traffic-warning-signs--information-end-of-built-up-area,
+.traffic-warning-signs[data-traffic-warning-signs='information-built-up-area'] .traffic-warning-signs--information-built-up-area,
+.traffic-warning-signs[data-traffic-warning-signs='signs-all-1'] .traffic-warning-signs--signs-all-1 {
     display: block;
 }
 
-.traffic-camera__item img {
-    width: 48px;
+.traffic-warning-signs__item {
+    animation: scaleUpDown 10s ease-in-out infinite;
+    animation-duration: 10s;
+}
+.traffic-warning-signs__item img {
+    width: 78px;
     height: auto;
 }
+@keyframes scaleUpDown {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(0.1);
+        opacity: 1;
+    }
 
+    50% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    99% {
+        transform: scale(1);
+        opacity: 1;
+
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+
+    }
+}
 
 
 .lanes {
@@ -200,6 +274,17 @@ body {
     height: 100%;
     perspective: 600px;
     transform-style: preserve-3d;
+}
+
+.lanes[data-lanes="2"] ~ .car-simple-mode,
+.lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+.lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
+.lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
+    left: 55%;
+}
+.lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-left"],
+.lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-right"] {
+    left: 55%;
 }
 .lane {
     width: 5px;
@@ -307,7 +392,13 @@ body {
     font-size: 19px;
     text-align: center;
     padding: 10px;
+    background-color: #121212;
 }
+/* .current-location .text {
+    display: inline-block;
+    padding: 2px 4px;
+    background-color: #121212;
+} */
 /* ----------------------------------------------------- responsive */
 @media (max-width: 1536px) {
     .car-simple-mode .car-img {
@@ -334,6 +425,17 @@ body {
         background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 /
             4px 80px repeat-y;
     }
+
+    .lanes[data-lanes="2"] ~ .car-simple-mode,
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
+        left: 57%;
+    }
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-left"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-right"] {
+        left: 57%;
+    }
 }
 @media (max-width: 992px) {
     .head-simple-mode {
@@ -348,10 +450,31 @@ body {
         background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 /
             3px 80px repeat-y;
     }
+
+    .lanes[data-lanes="2"] ~ .car-simple-mode,
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
+        left: 63%;
+    }
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-left"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-right"] {
+        left: 63%;
+    }
 }
 @media (max-width: 767px) {
     .car-simple-mode .car-img {
         width: calc(100vw / 4);
+    }
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-left"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-right"] {
+        left: 66%;
+    }
+    .lanes[data-lanes="2"] ~ .car-simple-mode,
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
+        left: 66%;
     }
 }
 @media (max-width: 400px) {

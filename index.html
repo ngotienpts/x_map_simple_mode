@@ -38,7 +38,7 @@
                     <!-- traffic signs -->
                     <div class="traffic-signs">
                         <!-- speed limit -->
-                        <div class="speed-limit" data-speed-limit="maximum-speed-limit-90">
+                        <div class="speed-limit js__speedLimit" data-speed-limit="maximum-speed-limit-30">
                             <div class="speed-limit__item speed-limit--30">
                                 <img src="./images/svg/30.svg" alt="">
                             </div>
@@ -130,7 +130,7 @@
                         </div>
                         <!-- end speed limit -->
                         <!-- signposts -->
-                        <div class="signposts" data-signposts="turn-left">
+                        <div class="signposts js__signposts" data-signposts="normal">
                             <div class="signposts-item signposts-item--turn-left">
                                 <img src="./images/svg/turn-left-w.svg" alt="" class="item-white">
                                 <img src="./images/svg/turn-left-gray.svg" alt="" class="item-gray">
@@ -146,43 +146,99 @@
                         </div>
                         <!-- end signposts -->
 
-                        <!-- traffic camera -->
-                        <div class="traffic-camera" data-traffic-camera="traffic">
-                            <div class="traffic-camera__item traffic-camera--traffic">
+                        <!-- traffic warning -->
+                        <div class="traffic-warning-signs js__trafficWarningSigns" data-traffic-warning-signs="no-u-turn">
+                            <div class="traffic-warning-signs__item traffic-warning-signs--traffic">
                                 <img src="./images/svg/camera-traffic.svg" alt="">
                             </div>
-                            <div class="traffic-camera__item traffic-camera--speed">
+                            <div class="traffic-warning-signs__item traffic-warning-signs--speed">
                                 <img src="./images/svg/camera-speed.svg" alt="">
                             </div>
-                            <div class="traffic-camera__item traffic-camera--crash">
+                            <div class="traffic-warning-signs__item traffic-warning-signs--crash">
                                 <img src="./images/svg/crash.svg" alt="">
                             </div>
-                            <div class="traffic-camera__item traffic-camera--cow">
+                            <div class="traffic-warning-signs__item traffic-warning-signs--cow">
                                 <img src="./images/svg/cow.svg" alt="">
                             </div>
-                            <div class="traffic-camera__item traffic-camera--flooded">
+                            <div class="traffic-warning-signs__item traffic-warning-signs--flooded">
                                 <img src="./images/svg/tron_truot.svg" alt="">
                             </div>
-                            <div class="traffic-camera__item traffic-camera--bumps">
+                            <div class="traffic-warning-signs__item traffic-warning-signs--bumps">
                                 <img src="./images/svg/bumps.svg" alt="">
                             </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--end-of-prohibition">
+                                <img src="./images/svg/end-of-prohibition.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-stopping">
+                                <img src="./images/svg/no-stopping.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-parking">
+                                <img src="./images/svg/no-parking.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-turn-left">
+                                <img src="./images/svg/cam_re_trai.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-turn-right">
+                                <img src="./images/svg/cam_re_phai.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-turn-left-no-u-turn">
+                                <img src="./images/svg/cam_re_trai_va_quay_dau.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-u-turn">
+                                <img src="./images/svg/cam_quay_dau.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-cars">
+                                <img src="./images/svg/cam_o_to.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--end-of-no-overtaking">
+                                <img src="./images/svg/het_cam_vuot.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-overtaking-g5">
+                                <img src="./images/svg/cam_o_to_vuot.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--no-overtaking">
+                                <img src="./images/svg/cam_xe_tai_vuot.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--end-of-maximum-speed-limit-50">
+                                <img src="./images/svg/het_gioi_han_50.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--end-of-maximum-speed-limit-60">
+                                <img src="./images/svg/het_gioi_han_60.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--end-of-maximum-speed-limit-70">
+                                <img src="./images/svg/het_gioi_han_70.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--end-of-maximum-speed-limit-80">
+                                <img src="./images/svg/het_gioi_han_80.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--end-of-maximum-speed-limit-90">
+                                <img src="./images/svg/het_gioi_han_90.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--end-of-maximum-speed-limit-100">
+                                <img src="./images/svg/het_gioi_han_100.svg" alt="">
+                            </div>
+                            
+                            <div class="traffic-warning-signs__item traffic-warning-signs--information-end-of-built-up-area">
+                                <img src="./images/svg/het_khu_dan_cu.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--information-built-up-area">
+                                <img src="./images/svg/khu_dan_cu.svg" alt="">
+                            </div>
+                            <div class="traffic-warning-signs__item traffic-warning-signs--signs-all-1">
+                                <img src="./images/svg/information--end-of-built-up-area.svg" alt="">
+                            </div>
                         </div>
-                        <!-- end traffic camera -->
+                        <!-- end traffic waring -->
                     </div>
                     <!-- end traffic signs -->
                 </div>
                 <!-- end info -->
                 <!-- lanes -->
-                <div class="lanes" data-lanes="3">
-                    <div class="lane js__lane"></div>
-                    <div class="lane js__lane"></div>
-                    <div class="lane js__lane"></div>
-                    <div class="lane js__lane"></div>
-                </div>
+                <div class="lanes js__lanes" data-lanes="3"></div>
                 <!-- end lanes -->
 
                 <!-- car -->
-                <div class="car-simple-mode js__carModel" data-car="normal">
+                <div class="car-simple-mode js__carModel" data-car="turn-left">
                     <div class="car-turn">
                         <img
                             src="./images/sang-trai.png"
@@ -216,7 +272,7 @@
                 <!-- end car -->
 
                 <div class="current-location">
-                    <span>Nguyễn Xiển</span>
+                    <span class="text">Nguyễn Xiển</span>
                 </div>
             </div>
         </section>
