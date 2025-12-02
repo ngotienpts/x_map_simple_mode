@@ -341,6 +341,7 @@ body {
 .car-simple-mode {
     position: absolute;
     bottom: 110px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -354,9 +355,11 @@ body {
 }
 .car-simple-mode .car-turn .turn-left {
     transform: rotateX(70deg) scaleY(1.2) translate(-45px, -20px);
+    transform: rotateX(70deg) scaleY(1.2) translate(-45px, 0px);
 }
 .car-simple-mode .car-turn .turn-right {
     transform: rotateX(70deg) scaleY(1.2) translate(45px, -20px);
+    transform: rotateX(70deg) scaleY(1.2) translate(45px, 0px);
 }
 
 @keyframes opacity {
@@ -436,6 +439,7 @@ body {
     }
     .car-simple-mode {
         bottom: 100px;
+        bottom: 40px;
     }
     .car-simple-mode .car-img {
         width: calc(100vw / 10);
