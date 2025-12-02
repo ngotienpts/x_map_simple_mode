@@ -5,10 +5,20 @@
     font-family: "Be Vietnam Pro", sans-serif;
     outline: none;
 }
-
+:root {
+    --bg-color: #121212;
+    --bg-danger:#ee0204;
+    --bg-succes:#21683c;
+    --bg-waring:#eeb669;
+    --color-text-white:#fff;
+    --color-text-white-f2:#f2f2f2;
+    --color-gray-555:#555;
+    --color-gray-666:#666;
+    --color-gray-fff:#ffffff00;
+}
 body {
-    background: #121212;
-    color: #f2f2f2;
+    background: var(--bg-color);
+    color: var(--color-text-white-f2);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -20,18 +30,18 @@ body {
 }
 .head-simple-mode {
     text-align: center;
-    color: #fff;
+    color: var(--color-text-white);
     font-size: 30px;
-    background-color: #21683c;
+    background-color: var(--bg-succes);
     font-weight: bold;
     padding: 15px 20px;
     transition: all 0.3s;
 }
 .head-simple-mode.head-dange {
-    background-color: #ee0204;
+    background-color: var(--bg-danger);
 }
 .head-simple-mode.head-warning {
-    background-color: #eeb669;
+    background-color: var(--bg-waring);
 }
 .body-simple-mode {
     display: flex;
@@ -51,7 +61,7 @@ body {
 }
 .timeline .timeline-icon {
     position: relative;
-    border-top: 1px solid #fff;
+    border-top: 1px solid var(--color-text-white);
 }
 .timeline .timeline-icon img {
     position: absolute;
@@ -70,12 +80,12 @@ body {
 .timeline .timeline-text .txt-1 {
     font-size: 19px;
     font-weight: bold;
-    color: #fff;
+    color: var(--color-text-white);
 }
 .timeline .timeline-text .txt-2 {
     font-size: 16px;
     font-weight: 400;
-    color: #666;
+    color: var(--color-gray-666);
 }
 .traffic-signs {
     height: 100%;
@@ -291,7 +301,7 @@ body {
 .lane {
     width: 5px;
     height: 100%;
-    background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 / 5px
+    background: linear-gradient(to bottom, var(--color-gray-555) 50%, var(--color-gray-fff) 20%) 0 0 / 5px
         80px repeat-y;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     -webkit-mask-image: linear-gradient(
@@ -402,7 +412,7 @@ body {
     font-size: 19px;
     text-align: center;
     padding: 10px;
-    background-color: #121212;
+    background-color: var(--bg-color);
 }
 /* .current-location .text {
     display: inline-block;
@@ -432,7 +442,7 @@ body {
     }
     .lane {
         width: 4px;
-        background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 /
+        background: linear-gradient(to bottom, var(--color-gray-555) 50%, var(--color-gray-fff) 20%) 0 0 /
             4px 80px repeat-y;
     }
 
@@ -459,7 +469,7 @@ body {
     }
     .lane {
         width: 3px;
-        background: linear-gradient(to bottom, #555 50%, #ffffff00 20%) 0 0 /
+        background: linear-gradient(to bottom, var(--color-gray-555) 50%, var(--color-gray-fff) 20%) 0 0 /
             3px 80px repeat-y;
     }
 
