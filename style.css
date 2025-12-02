@@ -292,11 +292,11 @@ body {
 .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-left"], 
 .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
 .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
-    left: 55%;
+    left: 54%;
 }
 .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-left"],
 .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-right"] {
-    left: 55%;
+    left: 54%;
 }
 .lane {
     width: 5px;
@@ -427,6 +427,18 @@ body {
     .car-simple-mode .car-img {
         width: calc(100vw / 14);
     }
+     .lanes[data-lanes="2"] ~ .car-simple-mode,
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-right"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-left"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
+        left: 55%;
+    }
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-left"],
+    .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-right"] {
+        left: 55%;
+    }
 }
 @media (max-width: 1280px) {
     .car-simple-mode .car-img {
@@ -496,7 +508,7 @@ body {
     }
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-left"],
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="turn-right"] {
-        left: 66%;
+        left: 63%;
     }
     .lanes[data-lanes="2"] ~ .car-simple-mode,
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="normal"],
@@ -504,7 +516,7 @@ body {
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fork-slight-left"], 
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="fast"], 
     .lanes[data-lanes="2"] ~ .car-simple-mode[data-car="stop"] {
-        left: 66%;
+        left: 63%;
     }
 }
 @media (max-width: 400px) {

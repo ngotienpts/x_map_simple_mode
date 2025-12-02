@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    setLane(3); 
+    setLane(2); 
     
     function setMaxSpeed() {
         const speedLimit = document.querySelector('.js__speedLimit');
