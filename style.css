@@ -355,11 +355,11 @@ body {
 }
 .car-simple-mode .car-turn .turn-left {
     transform: rotateX(70deg) scaleY(1.2) translate(-45px, -20px);
-    transform: rotateX(70deg) scaleY(1.2) translate(-45px, 0px);
+    transform: rotateX(70deg) scaleY(1.2) scaleX(0.6) translate(-40px, 0px);
 }
 .car-simple-mode .car-turn .turn-right {
     transform: rotateX(70deg) scaleY(1.2) translate(45px, -20px);
-    transform: rotateX(70deg) scaleY(1.2) translate(45px, 0px);
+    transform: rotateX(70deg) scaleY(1.2) scaleX(0.6) translate(40px, 0px);
 }
 
 @keyframes opacity {
